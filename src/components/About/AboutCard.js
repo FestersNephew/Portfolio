@@ -8,33 +8,33 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
+            Hi Everyone, I am <span className="purple">Trent Stephens</span> from <span className="purple">West Pawlet, Vermont.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
+            With a background in <span className="purple">Ecotourism and Adventure Travel</span>, I've enjoyed a dynamic career ranging from teaching outdoor sports to managing a 3,000+ acre farm. Currently, I thrive as a <span className="purple">Real Estate Agent</span> in Southern Vermont, utilizing my extensive knowledge of property management and sustainable living.
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
+            My passion for technology has led me into <span className="purple">web development and blockchain technology</span>, where I enjoy creating innovative solutions for digital asset management and smart contracts.
+            <br />
+            I am also known as <span className="purple">Uncle Festers Nephew</span> in the developer community. Reach out if you'd like to collaborate on a project!
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            When I'm not navigating the complexities of real estate or coding, I am:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Working on our organic farm raising sheep, chickens, and rabbits
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Exploring creative outlets through 3D animation and art
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Enhancing my skills in modern web technologies
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Strive to build things that make a difference!"
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Uncle Festers Nephew</footer>
         </blockquote>
       </Card.Body>
     </Card>
