@@ -17,52 +17,74 @@ import {
   SiSolidity,
   SiPostgresql,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+        <a href="https://www.cplusplus.com/" target="_blank" rel="noopener noreferrer">
+          <CgCPlusPlus />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+          <DiJavascript1 />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
+        <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
+          <DiNodejs />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+          <DiReact />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <a href="https://soliditylang.org/" target="_blank" rel="noopener noreferrer">
+          <SiSolidity />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
+        <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">
+          <DiMongodb />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+          <SiNextdotjs />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
+        <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
+          <DiGit />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">
+          <SiFirebase />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
+        <a href="https://redis.io/" target="_blank" rel="noopener noreferrer">
+          <SiRedis />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
+        <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">
+          <SiPostgresql />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
+        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+          <DiPython />
+        </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
+        <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer">
+          <DiJava />
+        </a>
       </Col>
     </Row>
   );

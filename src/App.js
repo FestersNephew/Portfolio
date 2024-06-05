@@ -3,9 +3,11 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+import DevProjects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Farm from "./components/Farm/Farm";
+import RealEstate from "./components/RealEstate/RealEstate";
 import {
   BrowserRouter as Router,
   Route,
@@ -36,9 +38,11 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/project" element={<DevProjects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/farm" element={<Farm />} />
+          <Route path="/realestate" element={<RealEstate/>} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
