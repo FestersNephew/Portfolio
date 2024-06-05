@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Document, Page, pdfjs } from "react-pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import Particle from "../Particle";
@@ -20,18 +20,23 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid className="resume-section" style={{ marginTop: "50px" }}>
         <Particle />
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px", position: "relative", zIndex: 1 }}>
+          <Col md={8} className="text-center">
+            <h1>Trent Stephens - Resume</h1>
+            <p>Download my CV to learn more about my professional background and skills.</p>
+            <Button
+              variant="primary"
+              href={pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ maxWidth: "250px" }}
+            >
+              <AiOutlineDownload />
+              &nbsp;Download CV
+            </Button>
+          </Col>
         </Row>
 
         <Row className="resume">
@@ -45,6 +50,7 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
+            rel="noopener noreferrer"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
