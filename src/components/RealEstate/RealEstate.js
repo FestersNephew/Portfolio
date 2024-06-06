@@ -53,7 +53,7 @@ function RealEstate() {
         <Col md={8} className="text-center">
           <h1 style={{ color: "#fff" }}>Recent Real Estate Activity</h1>
           <p style={{ color: "#fff" }}>
-            Check out some of the recent properties I've been involved with. For the latest updates, visit my{" "}
+            Check out some of the recent properties I've been involved with. For the latest updates, visit the Wohler Realty Group website at {" "}
             <a href="https://www.wohlerrealtygroup.com/realestate/agent/trent-stephens/" target="_blank" rel="noopener noreferrer" className="link-custom">
               Trent Kent Stephens, Wohler Realty Group
             </a>.
