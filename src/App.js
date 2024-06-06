@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Farm from "./components/Farm/Farm";
 import RealEstate from "./components/RealEstate/RealEstate";
+import Reiki from "./components/Reiki/Reiki";
 import {
   BrowserRouter as Router,
   Route,
@@ -43,6 +44,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/farm" element={<Farm />} />
           <Route path="/realestate" element={<RealEstate/>} />
+          <Route path="/reiki" element={<Reiki/>} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

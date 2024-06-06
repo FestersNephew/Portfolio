@@ -1,0 +1,62 @@
+.reiki-container {
+    margin-top: 60px;
+    color: #fff;
+  }
+  
+  .reiki-title {
+    margin-top: 60px;
+    font-size: 2.5em;
+    color: #fff; 
+  }
+  
+  .reiki-description {
+    font-size: 1.2em;
+    color: #fff; 
+  }
+  
+  .expandable-thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .expandable-thumbnail-container:hover {
+    transform: scale(1.5); /* Expand to fill the screen */
+    z-index: 10;
+  }
+  
+  .expandable-thumbnail-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .thumbnail-image {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+  }
+  
+  .thumbnail-container:hover .thumbnail-image {
+    transform: scale(1.2); /* Zoom in without expanding */
+  }
+  
+  .card-title {
+    color: #fff; 
+  }
+  

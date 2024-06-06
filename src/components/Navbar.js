@@ -88,6 +88,11 @@ function NavBar() {
                 <FaHome className="nav-icon" /> Real Estate
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} to="/reiki" onClick={() => updateExpanded(false)} className="nav-link-custom">
+                <FaHome className="nav-icon" /> Reiki
+              </Nav.Link>
+            </Nav.Item>
             <Nav.Item className="nav-item-custom fork-btn">
               <Nav.Link as={Link} to="https://github.com/FestersNephew/Portfolio" target="_blank" className="nav-link-custom fork-btn-inner">
                 <CgGitFork className="nav-icon" /> <AiFillStar className="nav-icon" />
