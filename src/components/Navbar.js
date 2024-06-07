@@ -6,7 +6,7 @@ import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { GiFarmer } from "react-icons/gi";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaHandHoldingHeart, FaUsers } from "react-icons/fa";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -42,10 +42,10 @@ function NavBar() {
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={`navbar ${navColour ? "sticky" : ""}`}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -59,43 +59,59 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav" className="navbar-collapse-custom">
           <Nav className="ms-auto nav-custom">
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <AiOutlineHome className="nav-icon" /> Home
+              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Home">
+                <AiOutlineHome className="nav-icon" />
+                <span className="nav-tooltip">Home</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <AiOutlineUser className="nav-icon" /> About
+              <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)} className="nav-link-custom" title="About">
+                <AiOutlineUser className="nav-icon" />
+                <span className="nav-tooltip">About</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <AiOutlineFundProjectionScreen className="nav-icon" /> Dev Projects
+              <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Dev Projects">
+                <AiOutlineFundProjectionScreen className="nav-icon" />
+                <span className="nav-tooltip">Dev Projects</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <CgFileDocument className="nav-icon" /> Resume
+              <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Resume">
+                <CgFileDocument className="nav-icon" />
+                <span className="nav-tooltip">Resume</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/farm" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <GiFarmer className="nav-icon" /> Farm
+              <Nav.Link as={Link} to="/farm" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Farm">
+                <GiFarmer className="nav-icon" />
+                <span className="nav-tooltip">Farm</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/realestate" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <FaHome className="nav-icon" /> Real Estate
+              <Nav.Link as={Link} to="/realestate" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Real Estate">
+                <FaHome className="nav-icon" />
+                <span className="nav-tooltip">Real Estate</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
-              <Nav.Link as={Link} to="/reiki" onClick={() => updateExpanded(false)} className="nav-link-custom">
-                <FaHome className="nav-icon" /> Reiki
+              <Nav.Link as={Link} to="/reiki" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Reiki">
+                <FaHandHoldingHeart className="nav-icon" />
+                <span className="nav-tooltip">Reiki</span>
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="nav-item-custom fork-btn">
-              <Nav.Link as={Link} to="https://github.com/FestersNephew/Portfolio" target="_blank" className="nav-link-custom fork-btn-inner">
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} to="/family" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Family">
+                <FaUsers className="nav-icon" />
+                <span className="nav-tooltip">Family</span>
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <Nav className="fork-btn">
+            <Nav.Item>
+              <Nav.Link as={Link} to="https://github.com/FestersNephew/Portfolio" target="_blank" className="nav-link-custom fork-btn-inner" title="GitHub">
                 <CgGitFork className="nav-icon" /> <AiFillStar className="nav-icon" />
+                <span className="nav-tooltip">GitHub</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
@@ -112,18 +128,39 @@ function NavBar() {
         .nav-item-custom {
           flex: 1 1 auto;
           text-align: center;
+          position: relative;
         }
         .nav-link-custom {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0.5rem 1rem;
+          padding: 0.2rem 0.4rem; /* Reduce padding */
           white-space: nowrap;
           width: 100%;
+          font-size: 0.9rem; /* Reduce font size */
+          position: relative;
+        }
+        .nav-link-custom:hover .nav-tooltip {
+          visibility: visible;
+          opacity: 1;
         }
         .nav-icon {
-          margin-right: 5px;
-          font-size: 1.2em;
+          font-size: 1.1em; /* Adjust icon size */
+        }
+        .nav-tooltip {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: -30px; /* Position above the icon */
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #6f42c1;
+          color: #fff;
+          padding: 2px 5px;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          white-space: nowrap;
+          transition: visibility 0.2s, opacity 0.2s;
         }
         .fork-btn-inner {
           display: flex;
@@ -133,12 +170,22 @@ function NavBar() {
           border-radius: 8px;
           color: white;
           justify-content: center;
-          width: 100%;
+          width: auto;
         }
         .navbar-collapse-custom {
           max-height: calc(100vh - 56px);
           overflow-y: auto;
           overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .navbar {
+          padding: 0.5rem 1rem; /* Reduce overall padding */
+        }
+        .navbar-brand img {
+          height: 30px; /* Adjust logo height */
+        }
+        .sticky {
+          padding: 0.25rem 0.5rem; /* Further reduce padding when sticky */
+          transition: padding 0.3s ease;
         }
         @media (max-width: 767px) {
           .nav-custom {
@@ -151,13 +198,13 @@ function NavBar() {
           }
           .nav-link-custom {
             justify-content: center;
-            padding: 0.4rem 0; /* Reduce padding for smaller screens */
+            padding: 0.3rem 0; /* Reduce padding for smaller screens */
           }
         }
         @media (max-width: 575px) {
           .nav-link-custom {
-            font-size: 0.9rem;
-            padding: 0.3rem 0; /* Further reduce padding */
+            font-size: 0.8rem;
+            padding: 0.2rem 0; /* Further reduce padding */
           }
           .nav-icon {
             font-size: 1em;
@@ -165,8 +212,8 @@ function NavBar() {
         }
         @media (max-width: 375px) {
           .nav-link-custom {
-            font-size: 0.8rem;
-            padding: 0.2rem 0; /* Further reduce padding */
+            font-size: 0.7rem;
+            padding: 0.1rem 0; /* Further reduce padding */
           }
           .nav-icon {
             font-size: 0.9em;

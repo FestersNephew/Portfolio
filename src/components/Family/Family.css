@@ -1,0 +1,75 @@
+.family-container {
+    margin-top: 60px;
+    color: #fff;
+    padding-bottom: 60px; /* Add padding to prevent footer overlap */
+  }
+  
+  .family-title {
+    margin-top: 60px;
+    font-size: 2.5em;
+    color: #fff; 
+  }
+  
+  .family-description {
+    font-size: 1.2em;
+    color: #fff; 
+  }
+  
+  .family-member {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .family-thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .family-thumbnail-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 15px; /* Add some rounding to the images */
+  }
+  
+  .family-thumbnail-container:hover .family-thumbnail-image {
+    transform: scale(1.1); /* Zoom in slightly on hover */
+  }
+  
+  .family-name {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #fff; 
+  }
+  
+  .family-text {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #fff;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+  }
+  
+  .pulsing {
+    animation: pulse 2s infinite;
+    border-radius: 15px; /* Match the image rounding */
+  }
+  

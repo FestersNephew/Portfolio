@@ -9,6 +9,7 @@ import Resume from "./components/Resume/ResumeNew";
 import Farm from "./components/Farm/Farm";
 import RealEstate from "./components/RealEstate/RealEstate";
 import Reiki from "./components/Reiki/Reiki";
+import Family from "./components/Family/Family";
 import {
   BrowserRouter as Router,
   Route,
@@ -45,6 +46,7 @@ function App() {
           <Route path="/farm" element={<Farm />} />
           <Route path="/realestate" element={<RealEstate/>} />
           <Route path="/reiki" element={<Reiki/>} />
+          <Route path="/family" element={<Family/>} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

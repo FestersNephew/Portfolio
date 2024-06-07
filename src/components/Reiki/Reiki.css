@@ -1,62 +1,135 @@
 .reiki-container {
-    margin-top: 60px;
-    color: #fff;
+  margin-top: 60px;
+  color: #fff;
+  padding-bottom: 60px; /* Add padding to prevent footer overlap */
+}
+
+.reiki-title {
+  margin-top: 60px;
+  font-size: 2.5em;
+  color: #fff; 
+}
+
+.reiki-description {
+  font-size: 1.2em;
+  color: #fff; 
+}
+
+.reiki-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reiki-thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.reiki-thumbnail-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 15px; /* Add some rounding to the images */
+}
+
+.reiki-thumbnail-container:hover .reiki-thumbnail-image {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+.reiki-name {
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #fff; 
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   }
-  
-  .reiki-title {
-    margin-top: 60px;
-    font-size: 2.5em;
-    color: #fff; 
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
   }
-  
-  .reiki-description {
-    font-size: 1.2em;
-    color: #fff; 
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   }
-  
-  .expandable-thumbnail-container {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
+}
+
+.pulsing {
+  animation: pulse 2s infinite;
+  border-radius: 15px; /* Match the image rounding */
+}
+
+.chakra-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chakra {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.7));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .expandable-thumbnail-container:hover {
-    transform: scale(1.5); /* Expand to fill the screen */
-    z-index: 10;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .expandable-thumbnail-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+}
+
+.chakra-root {
+  background: radial-gradient(circle, red, transparent);
+}
+
+.chakra-sacral {
+  background: radial-gradient(circle, orange, transparent);
+}
+
+.chakra-solar {
+  background: radial-gradient(circle, yellow, transparent);
+}
+
+.chakra-heart {
+  background: radial-gradient(circle, green, transparent);
+}
+
+.chakra-throat {
+  background: radial-gradient(circle, blue, transparent);
+}
+
+.chakra-third-eye {
+  background: radial-gradient(circle, indigo, transparent);
+}
+
+.chakra-crown {
+  background: radial-gradient(circle, violet, transparent);
+}
+
+.reiki-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3));
+  animation: bg-animation 10s infinite alternate;
+  overflow: auto; /* Ensure the container can scroll */
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 0%;
   }
-  
-  .thumbnail-container {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  100% {
+    background-position: 100% 100%;
   }
-  
-  .thumbnail-image {
-    transition: transform 0.3s ease;
-    width: 100%;
-    height: auto;
-  }
-  
-  .thumbnail-container:hover .thumbnail-image {
-    transform: scale(1.2); /* Zoom in without expanding */
-  }
-  
-  .card-title {
-    color: #fff; 
-  }
-  
+}
