@@ -1,140 +1,95 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import buttonfalls from "../../Assets/Projects/buttonfalls.png";
-import mountainhome from "../../Assets/Projects/mountainhome.jpg";
-import townhome from "../../Assets/Projects/townhome.jpg";
+import React, { useState } from 'react';
+import MapSVG from './MapSVG';
+import Modal from './Modal';
 
-function RealEstate() {
-  const properties = [
-    {
-      id: 1,
-      image: buttonfalls,
-      title: "100+ Acre Berry Farm",
-      description: "An 1880's farm house located in Pawlet Vermont, with acres of established berry bushes along the Metttowee River.",
-      date: "June 30, 2023",
-    },
-    {
-      id: 2,
-      image: mountainhome,
-      title: "Ski Mountain Retreat",
-      description: "Prestigious 4 bedroom mountain home in the High Meadow community on Stratton Mountain",
-      date: "May 1, 2023",
-    },
-    {
-      id: 3,
-      image: townhome,
-      title: "Home in Manchester",
-      description: "This quaint house is located in the town of Manchester, and offered convenient town living in a beautiful setting.",
-      date: "March 29, 2022",
-    },
-  ];
+const townInfo = {
+  windham: {
+      name: "Windham",
+      description: "Windham is known for its historic significance, with roots dating back to the 1600s. It's home to the Windham Textile and History Museum, which showcases the town's rich industrial past. Windham also offers plenty of outdoor recreation opportunities in its picturesque landscapes&#8203;:citation[oaicite:14]{index=14}&#8203;&#8203;:citation[oaicite:13]{index=13}&#8203;.",
+  },
+  weston: {
+      name: "Weston",
+      description: "Weston is celebrated for its charming village and historic sites. It is home to the renowned Weston Playhouse and offers beautiful landscapes perfect for outdoor activities like hiking and skiing&#8203;:citation[oaicite:12]{index=12}&#8203;.",
+  },
+  londonderry: {
+      name: "Londonderry",
+      description: "Londonderry is known for its scenic beauty and outdoor recreational activities. It's a gateway to popular ski resorts and offers hiking, fishing, and stunning views year-round&#8203;:citation[oaicite:11]{index=11}&#8203;.",
+  },
+  jamaica: {
+      name: "Jamaica",
+      description: "Jamaica is famous for Jamaica State Park, which offers hiking, camping, and picnicking along the scenic West River. The park is a popular spot for leaf-peeping during the fall&#8203;:citation[oaicite:10]{index=10}&#8203;.",
+  },
+  wardsboro: {
+      name: "Wardsboro",
+      description: "Wardsboro is a quaint town known for its close-knit community and the annual Gilfeather Turnip Festival, celebrating the town's unique local vegetable&#8203;:citation[oaicite:9]{index=9}&#8203;.",
+  },
+  dover: {
+      name: "Dover",
+      description: "Dover is home to Mount Snow, a major ski resort in Vermont, making it a popular destination for winter sports enthusiasts&#8203;:citation[oaicite:8]{index=8}&#8203;.",
+  },
+  somerset: {
+      name: "Somerset",
+      description: "Somerset is a quiet town known for its outdoor activities, including hiking and exploring the Somerset Reservoir, a peaceful spot for fishing and boating&#8203;:citation[oaicite:7]{index=7}&#8203;.",
+  },
+  stratton: {
+      name: "Stratton",
+      description: "Stratton is famous for the Stratton Mountain Resort, which offers skiing, snowboarding, and year-round outdoor activities&#8203;:citation[oaicite:6]{index=6}&#8203;.",
+  },
+  winhall: {
+      name: "Winhall",
+      description: "Winhall is known for its proximity to Stratton Mountain and its beautiful natural surroundings, making it a great place for outdoor recreation&#8203;:citation[oaicite:5]{index=5}&#8203;.",
+  },
+  langrove: {
+      name: "Langrove",
+      description: "Langrove, though lesser-known, offers a peaceful retreat with its natural beauty and small-town charm&#8203;:citation[oaicite:4]{index=4}&#8203;.",
+  },
+  sunderland: {
+      name: "Sunderland",
+      description: "Sunderland is recognized for its scenic landscapes and outdoor activities, including hiking and fishing in the Battenkill River&#8203;:citation[oaicite:3]{index=3}&#8203;.",
+  },
+  peru: {
+      name: "Peru",
+      description: "Peru is a small town known for the Bromley Mountain Resort, which offers skiing in the winter and adventure parks in the summer&#8203;:citation[oaicite:2]{index=2}&#8203;.",
+  },
+  mttabor: {
+      name: "Mount Tabor",
+      description: "Mount Tabor offers stunning views and outdoor activities like hiking in the Green Mountain National Forest&#8203;:citation[oaicite:1]{index=1}&#8203;.",
+  },
+  glastonbury: {
+      name: "Glastonbury",
+      description: "Glastonbury is known for its mysterious unincorporated town status and ghost town legends, attracting curious visitors&#8203;:citation[oaicite:0]{index=0}&#8203;.",
+  },
+};
 
-  const reviews = [
-    {
-      id: 1,
-      client: "Seller, Roxanne Greene",
-      review: "I would recommend Trent Stephens from Wohler Realty Group to anyone. He went above and beyond before and after the sale. Trent was professional, efficient, and exceeded my expectations.",
-    },
-    {
-      id: 2,
-      client: "Seller, Richard Barlow",
-      review: "Trent was great to work with keeping us informed and going the extra mile to get the job done.",
-    },
-    {
-      id: 3,
-      client: "Buyers, Lane and Jess Morrow",
-      review: "We moved over a thousand miles away and Trent helped find us a home soon after we arrived. We couldn’t have done it as smoothly or as easily without Trent by our side and the work he did keeping everything on track. He was so integral to us to finding our first home!",
-    },
-  ];
+const RealEstate = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+
+  const handleClick = (event) => {
+    const townId = event.target.id;
+    console.log('Town clicked:', townId);
+    if (townInfo[townId]) {
+      setModalContent(townInfo[townId]);
+      setIsModalOpen(true);
+    }
+  };
 
   return (
-    <Container style={{ marginTop: "120px" }}>
-      <Row className="justify-content-center">
-        <Col md={8} className="text-center">
-          <h1 style={{ color: "#fff" }}>Recent Real Estate Activity</h1>
-          <p style={{ color: "#fff" }}>
-            Check out some of the recent properties I've been involved with. For the latest updates, visit the Wohler Realty Group website at {" "}
-            <a href="https://www.wohlerrealtygroup.com/realestate/agent/trent-stephens/" target="_blank" rel="noopener noreferrer" className="link-custom">
-              Trent Kent Stephens, Wohler Realty Group
-            </a>.
-          </p>
-        </Col>
-      </Row>
-      <Row className="justify-content-center">
-        {properties.map((property) => (
-          <Col md={4} key={property.id}>
-            <Card className="mb-4 text-white bg-dark">
-              <Card.Img variant="top" src={property.image} alt={property.title} />
-              <Card.Body>
-                <Card.Title>{property.title}</Card.Title>
-                <Card.Text>{property.description}</Card.Text>
-                <Card.Footer>
-                  <small className="text-muted">Sold on {property.date}</small>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <Row className="justify-content-center mt-5">
-        <Col md={8} className="text-center">
-          <h2 style={{ color: "#fff" }}>Client Testimonials</h2>
-        </Col>
-      </Row>
-      <Row className="justify-content-center">
-        {reviews.map((review) => (
-          <Col md={4} key={review.id}>
-            <Card className="mb-4 text-white bg-dark">
-              <Card.Body>
-                <Card.Text>"{review.review}"</Card.Text>
-                <Card.Footer>
-                  <small className="text-muted">- {review.client}</small>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <Row className="justify-content-center mt-5">
-        <Col md={8} className="text-center contact-info">
-          <h2>Contact Information</h2>
-          <p>
-            <strong>Office Location</strong><br />
-            Wohler Realty Group<br />
-            Mail: PO Box 355, Stratton, VT 05155<br />
-            Office: 42 Route 30, Bondville, VT 05340<br />
-          </p>
-          <p>
-            <strong>Contact Info</strong><br />
-            Office: <a href="tel:802-297-7990" className="contact-link">802-297-7990</a><br />
-            Cell: <a href="tel:802-345-8869" className="contact-link">802-345-8869</a><br />
-            <a href="mailto:trentstephens@wohlerrealtygroup.com" className="contact-link">trentstephens@wohlerrealtygroup.com</a>
-          </p>
-        </Col>
-      </Row>
-      <style jsx>{`
-        .link-custom {
-          display: inline-block;
-          margin-top: 1rem;
-          font-weight: bold;
-          color: #fff;
-        }
-        .contact-info {
-          color: #fff;
-          background-color: rgba(0, 0, 0, 0.7);
-          padding: 20px;
-          border-radius: 10px;
-        }
-        .contact-link {
-          color: #ffcc00;
-          text-decoration: none;
-        }
-        .contact-link:hover {
-          text-decoration: underline;
-        }
-      `}</style>
-    </Container>
+    <div>
+      <h1>Real Estate Map</h1>
+      <div onClick={handleClick}>
+        <MapSVG />
+      </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {modalContent && (
+          <div>
+            <h2>{modalContent.name}</h2>
+            <p>{modalContent.description}</p>
+          </div>
+        )}
+      </Modal>
+    </div>
   );
-}
+};
 
 export default RealEstate;

@@ -1,0 +1,36 @@
+.profile-transition {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Adjusted height to ensure the images fit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important; /* Ensure no margin below the transition */
+}
+
+.profile-image {
+  position: absolute;
+  width: auto;
+  max-width: 100%; /* Ensure the images do not exceed the container's width */
+  max-height: 100%; /* Ensure the images do not exceed the container's height */
+  top: 0;
+  left: 0;
+  transition: opacity 5s ease-in-out; /* Adjust the duration as needed */
+}
+
+.profile-image.svg {
+  z-index: 1;
+}
+
+.profile-image.real {
+  z-index: 0;
+  opacity: 0;
+}
+
+.profile-image.fade-in {
+  opacity: 1;
+}
+
+.profile-image.fade-out {
+  opacity: 0;
+}

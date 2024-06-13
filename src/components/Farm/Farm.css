@@ -1,0 +1,63 @@
+.farm-container {
+  margin-top: 100px;
+  position: relative;
+}
+
+.farm-card {
+  background-color: #333 !important; /* Ensure the card itself has a dark background */
+  color: #fff;
+}
+
+.farm-card .card-img-top {
+  background-color: transparent !important; /* Ensure the image itself has a transparent background */
+  border: none; /* Remove any border if present */
+  padding: 0; /* Remove any padding if present */
+}
+
+
+.farm-card-title,
+.farm-card-text {
+  color: #fff; /* Ensure text color is white */
+}
+
+.farm-text-center h1,
+.farm-text-center h2,
+.farm-text-center p {
+  color: #fff; /* Ensure text color is white */
+}
+
+.farm-text-center h1 {
+  margin-bottom: 20px;
+}
+
+.farm-text-center p {
+  color: #ccc; /* Ensure paragraph text color is a lighter gray */
+}
+
+.farm-plant-container {
+  position: absolute;
+  bottom: 0;
+  right: 0; /* Change to ensure it's aligned properly */
+  width: 150px; /* Adjust width to fit the plant image */
+  height: 400px; /* Set a height for the container to fit the image */
+  overflow: hidden;
+  z-index: 1; /* Ensure it is above the other content */
+}
+
+.farm-growing-plant {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Ensure the image scales with the container */
+  height: auto; /* Maintain aspect ratio */
+  transform-origin: bottom;
+  animation: grow 4s infinite alternate;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

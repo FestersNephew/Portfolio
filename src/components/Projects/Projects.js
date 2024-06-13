@@ -1,9 +1,12 @@
+// src/components/Projects/Projects.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import ArtSlideshow from "./ArtSlideshow";
 import myconet from "../../Assets/Projects/myconet.png";
 import uniqueFungi from "../../Assets/Projects/uniqueFungi.png";
+
 
 function Projects() {
   return (
@@ -37,7 +40,14 @@ function Projects() {
               demoLink="https://uniquefungi.surge.sh/"
             />
           </Col>
-
+        </Row>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={8} className="project-card">
+            <h2 className="project-heading">
+              3D Art <strong className="purple">Slideshow</strong>
+            </h2>
+            <ArtSlideshow />
+          </Col>
         </Row>
       </Container>
     </Container>

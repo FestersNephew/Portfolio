@@ -1,0 +1,46 @@
+/* src/components/Ecotourism/Ecotourism.css */
+.ecotourism-container {
+    margin-top: 60px;
+    color: #fff;
+    padding-bottom: 60px;
+    padding-top: 60px; /* Add padding to prevent header overlap */
+  }
+  
+  .ecotourism-title {
+    font-size: 2.5em;
+    color: #fff; 
+  }
+  
+  .ecotourism-description {
+    font-size: 1.2em;
+    color: #fff; 
+  }
+  
+  .ecotourism-name {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #fff; 
+  }
+  
+  .ecotourism-text {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #fff;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  ul.ecotourism-text {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .ecotourism-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  

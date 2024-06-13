@@ -10,6 +10,7 @@ import Farm from "./components/Farm/Farm";
 import RealEstate from "./components/RealEstate/RealEstate";
 import Reiki from "./components/Reiki/Reiki";
 import Family from "./components/Family/Family";
+import Ecotourism from "./components/Ecotourism/Ecotourism";
 import {
   BrowserRouter as Router,
   Route,
@@ -47,6 +48,7 @@ function App() {
           <Route path="/realestate" element={<RealEstate/>} />
           <Route path="/reiki" element={<Reiki/>} />
           <Route path="/family" element={<Family/>} />
+          <Route path="/ecotourism" element={<Ecotourism/>} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

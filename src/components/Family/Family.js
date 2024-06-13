@@ -4,10 +4,12 @@ import "./Family.css";
 import takoda from "../../Assets/Family/takoda.JPEG"; 
 import mossie from "../../Assets/Family/mossie.JPEG";
 import jme from "../../Assets/Family/jme.JPEG"; 
+import Particle from "../Particle";
 
 function Family() {
     return (
       <Container className="family-container">
+        <Particle />
         <Row className="justify-content-center">
           <Col md={8} className="text-center">
             <h1 className="family-title">My Family</h1>

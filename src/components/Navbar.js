@@ -106,6 +106,12 @@ function NavBar() {
                 <span className="nav-tooltip">Family</span>
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} to="/ecotourism" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Ecotourism">
+                <AiFillStar className="nav-icon" />
+                <span className="nav-tooltip">Ecotourism</span>
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
           <Nav className="fork-btn">
             <Nav.Item>
@@ -117,109 +123,6 @@ function NavBar() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-
-      <style jsx>{`
-        .nav-custom {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          flex-wrap: wrap;
-        }
-        .nav-item-custom {
-          flex: 1 1 auto;
-          text-align: center;
-          position: relative;
-        }
-        .nav-link-custom {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0.2rem 0.4rem; /* Reduce padding */
-          white-space: nowrap;
-          width: 100%;
-          font-size: 0.9rem; /* Reduce font size */
-          position: relative;
-        }
-        .nav-link-custom:hover .nav-tooltip {
-          visibility: visible;
-          opacity: 1;
-        }
-        .nav-icon {
-          font-size: 1.1em; /* Adjust icon size */
-        }
-        .nav-tooltip {
-          visibility: hidden;
-          opacity: 0;
-          position: absolute;
-          top: -30px; /* Position above the icon */
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #6f42c1;
-          color: #fff;
-          padding: 2px 5px;
-          border-radius: 3px;
-          font-size: 0.8rem;
-          white-space: nowrap;
-          transition: visibility 0.2s, opacity 0.2s;
-        }
-        .fork-btn-inner {
-          display: flex;
-          align-items: center;
-          padding: 0.5rem;
-          background-color: #6f42c1;
-          border-radius: 8px;
-          color: white;
-          justify-content: center;
-          width: auto;
-        }
-        .navbar-collapse-custom {
-          max-height: calc(100vh - 56px);
-          overflow-y: auto;
-          overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-        .navbar {
-          padding: 0.5rem 1rem; /* Reduce overall padding */
-        }
-        .navbar-brand img {
-          height: 30px; /* Adjust logo height */
-        }
-        .sticky {
-          padding: 0.25rem 0.5rem; /* Further reduce padding when sticky */
-          transition: padding 0.3s ease;
-        }
-        @media (max-width: 767px) {
-          .nav-custom {
-            flex-direction: column;
-            align-items: center;
-            margin: 0; /* Remove margins */
-          }
-          .nav-item-custom {
-            width: 100%;
-          }
-          .nav-link-custom {
-            justify-content: center;
-            padding: 0.3rem 0; /* Reduce padding for smaller screens */
-          }
-        }
-        @media (max-width: 575px) {
-          .nav-link-custom {
-            font-size: 0.8rem;
-            padding: 0.2rem 0; /* Further reduce padding */
-          }
-          .nav-icon {
-            font-size: 1em;
-          }
-        }
-        @media (max-width: 375px) {
-          .nav-link-custom {
-            font-size: 0.7rem;
-            padding: 0.1rem 0; /* Further reduce padding */
-          }
-          .nav-icon {
-            font-size: 0.9em;
-          }
-        }
-      `}</style>
     </Navbar>
   );
 }

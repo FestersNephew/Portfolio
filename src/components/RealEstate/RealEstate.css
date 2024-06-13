@@ -1,0 +1,11 @@
+/* RealEstate.css */
+.map .town {
+    cursor: pointer;
+    fill: #ccc;
+    stroke: #000;
+  }
+  
+  .map .town:hover {
+    fill: #aaa;
+  }
+  

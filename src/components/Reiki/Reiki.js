@@ -2,16 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ChakraSection from "./ChakraSection";
 import "./Reiki.css";
-import certificate from "../../Assets/Projects/reiki_certification.png";
-import license from "../../Assets/Projects/vermont_license.png";
-import reiki1 from "../../Assets/Projects/reiki1.JPEG";
-import reiki2 from "../../Assets/Projects/reiki2.JPEG";
-import reiki3 from "../../Assets/Projects/reiki3.JPEG";
+import certificate from "../../Assets/Reiki/reiki_certification.png";
+import license from "../../Assets/Reiki/vermont_license.png";
+import reiki1 from "../../Assets/Reiki/reiki1.JPEG";
+import reiki2 from "../../Assets/Reiki/reiki2.JPEG";
+import reiki3 from "../../Assets/Reiki/reiki3.JPEG";
+import Particle from "../Particle";
 
 function Reiki() {
   return (
     <div className="reiki-background">
       <Container className="reiki-container">
+      <Particle />
         <Row className="justify-content-center">
           <Col md={8} className="text-center">
             <h1 className="reiki-title">My Reiki Practice</h1>
