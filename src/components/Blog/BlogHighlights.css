@@ -2,67 +2,103 @@
   padding: 15px;
   background-color: #333; /* Dark background */
   color: #fff; /* Light text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .highlights-header {
   font-size: 1.8em;
   margin-bottom: 15px;
-  text-align: center; /* Center the header */
 }
 
 .newest-post-header {
   font-size: 1.5em;
   margin-bottom: 10px;
-  text-align: center; /* Center the newest post header */
 }
 
 .newest-post {
   background-color: #444;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   color: #fff;
-  margin-bottom: 30px; /* Add more space below the featured post */
+  margin-bottom: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px; /* Limit the width of the featured post container */
-  margin: 0 auto 30px auto; /* Center the container and add margin bottom */
+  max-width: 800px;
+  width: 100%;
 }
 
 .newest-post .highlight-post-image {
-  width: 100%; /* Make the image responsive */
-  max-width: 300px; /* Set a fixed max width */
+  width: 50%; /* Adjusted width */
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
   object-fit: cover;
 }
 
+.side-widgets {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.side-widgets > div {
+  flex: 1;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+.search-widget .search-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  margin-top: 5px;
+}
+
+.popular-posts-list li {
+  margin-bottom: 5px;
+}
+
+.popular-posts-list li a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.popular-posts-list li a:hover {
+  text-decoration: underline;
+}
+
 .highlights-posts {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* Increase the gap between posts */
-  justify-content: center; /* Center the posts */
+  gap: 15px;
+  justify-content: center;
 }
 
 .highlight-post-link {
   text-decoration: none;
   color: inherit;
-  flex: 1 1 calc(33% - 30px); /* Adjust for the increased gap */
-  max-width: 300px; /* Limit the max width of each post */
+  flex: 1 1 calc(33% - 15px);
 }
 
 .highlight-post {
   background-color: #444;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Make all boxes the same height */
+  max-width: 300px;
 }
 
 .highlight-post .highlight-post-title {
@@ -79,12 +115,6 @@
 }
 
 .highlight-post .highlight-post-author {
-  font-size: 0.8em;
-  color: #aaa;
-  margin-bottom: 8px;
-}
-
-.highlight-post .highlight-post-date {
   font-size: 0.8em;
   color: #aaa;
   margin-bottom: 8px;
@@ -131,5 +161,14 @@
 @media (max-width: 768px) {
   .highlight-post-link {
     flex: 1 1 100%;
+  }
+
+  .side-widgets {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .side-widgets > div {
+    margin: 0 0 15px 0;
   }
 }
