@@ -1,0 +1,55 @@
+/* RealEstatePage.css */
+.section {
+    padding: 100px 20px 20px; /* Top padding adjusted for navbar */
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Ensure text is readable */
+    border-radius: 8px;
+    color: white; /* Text color for readability */
+  }
+  
+  .real-estate-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure header color contrasts with background */
+  }
+  
+  .sales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .sale-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .sale-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .real-estate-description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .real-estate-link {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  .real-estate-link:hover {
+    text-decoration: underline;
+  }
+  
+  .real-estate-blog {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  .real-estate-blog li {
+    margin-bottom: 10px;
+  }
+  

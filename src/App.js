@@ -7,10 +7,12 @@ import DevProjects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Farm from "./components/Farm/Farm";
-import RealEstate from "./components/RealEstate/RealEstate";
+import RealEstate from "./components/RealEstate/RealEstatePage";
 import Reiki from "./components/Reiki/Reiki";
 import Family from "./components/Family/Family";
 import Ecotourism from "./components/Ecotourism/Ecotourism";
+import Blog from "./components/Blog/Blog";
+import BlogPost from './components/Blog/BlogPost';
 import {
   BrowserRouter as Router,
   Route,
@@ -50,6 +52,8 @@ function App() {
           <Route path="/family" element={<Family/>} />
           <Route path="/ecotourism" element={<Ecotourism/>} />
           <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/post/:slug" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>

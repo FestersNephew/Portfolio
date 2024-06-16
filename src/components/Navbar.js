@@ -6,7 +6,7 @@ import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { GiFarmer } from "react-icons/gi";
-import { FaHome, FaHandHoldingHeart, FaUsers } from "react-icons/fa";
+import { FaHome, FaHandHoldingHeart, FaUsers, FaBlog } from "react-icons/fa";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -104,6 +104,12 @@ function NavBar() {
               <Nav.Link as={Link} to="/family" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Family">
                 <FaUsers className="nav-icon" />
                 <span className="nav-tooltip">Family</span>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} to="/blog" onClick={() => updateExpanded(false)} className="nav-link-custom" title="Blog">
+                <FaBlog className="nav-icon" />
+                <span className="nav-tooltip">Blog</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="nav-item-custom">
