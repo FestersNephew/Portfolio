@@ -32,30 +32,36 @@ const BlogHighlights = () => {
     return <div>Loading...</div>;
   }
 
-  const [featuredPost, ...otherPosts] = filteredPosts;
+  const [featuredPost, ...otherPosts] = posts;
+  const filteredFeaturedPost = filteredPosts.find(post => post.slug.current === featuredPost.slug.current);
 
   return (
     <div className="highlights-container">
       <h1 className="highlights-header">Blog Highlights</h1>
+      <p className="search-description">
+        Start typing in the search bar below. As you type, only the articles containing your search term will remain visible.
+      </p>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="newest-post-header">Here's my newest blog article:</div>
-      {featuredPost && (
-        <a href={`/post/${featuredPost.slug.current}`} className="highlight-post-link newest-post">
-          <div className="highlight-post">
-            {featuredPost.mainImage && <img src={urlFor(featuredPost.mainImage).url()} alt={featuredPost.title} className="highlight-post-image" />}
-            <h2 className="highlight-post-title">{featuredPost.title}</h2>
-            <div className="highlight-post-snippet">{getSnippet(featuredPost.body)}</div>
-            <p className="highlight-post-author">By {featuredPost.authorName}</p>
-            <p className="highlight-post-date">Published on {new Date(featuredPost.publishedAt).toLocaleDateString()}</p>
-            <div className="highlight-post-categories">{featuredPost.categories ? featuredPost.categories.join(', ') : ''}</div>
-            <div className="read-more-link-container">
-              <span className="read-more-link">Read More</span>
+      {filteredFeaturedPost && (
+        <>
+          <div className="newest-post-header">Here's my newest blog article:</div>
+          <a href={`/post/${filteredFeaturedPost.slug.current}`} className="highlight-post-link newest-post">
+            <div className="highlight-post">
+              {filteredFeaturedPost.mainImage && <img src={urlFor(filteredFeaturedPost.mainImage).url()} alt={filteredFeaturedPost.title} className="highlight-post-image" />}
+              <h2 className="highlight-post-title">{filteredFeaturedPost.title}</h2>
+              <div className="highlight-post-snippet">{getSnippet(filteredFeaturedPost.body)}</div>
+              <p className="highlight-post-author">By {filteredFeaturedPost.authorName}</p>
+              <p className="highlight-post-date">Published on {new Date(filteredFeaturedPost.publishedAt).toLocaleDateString()}</p>
+              <div className="highlight-post-categories">{filteredFeaturedPost.categories ? filteredFeaturedPost.categories.join(', ') : ''}</div>
+              <div className="read-more-link-container">
+                <span className="read-more-link">Read More</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </>
       )}
       <div className="highlights-posts">
-        {otherPosts.map((post, index) => (
+        {otherPosts.filter(post => post.slug.current !== featuredPost.slug.current).map((post, index) => (
           <a key={post.slug.current} href={`/post/${post.slug.current}`} className={`highlight-post-link ${index % 2 === 0 ? 'highlight-post-even' : 'highlight-post-odd'}`}>
             <div className="highlight-post">
               {index % 2 === 0 ? (
