@@ -4,13 +4,13 @@
     margin-bottom: 40px;
     background-color: rgba(0, 0, 0, 0.5); /* Ensure text is readable */
     border-radius: 8px;
-    color: white; /* Text color for readability */
+    color: #83d662; 
   }
   
   .real-estate-header {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ffffff; /* Ensure header color contrasts with background */
+    color: #62a8c2; /* Ensure header color contrasts with background */
   }
   
   .sales-grid {

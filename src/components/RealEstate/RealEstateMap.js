@@ -19,7 +19,7 @@ const townInfo = {
         <a href="https://www.larsonfarmvt.com/" target="_blank">Larson Farm and Creamery</a><br/>
         <a href="https://www.pondmountaininn.com/" target="_blank">Pond Mountain Inn</a><br/>
         <a href="https://www.facebook.com/TheWellsCountryStore/" target="_blank">The Wells Country Store (FB)</a><br/>
-        Thomas Auto Repair: <a href="tel:+18026459122">+1 (802) 645-9122</a>
+        Thomas Auto Repair: <a href="tel:+18026459122">+1 (802) 645-9122</a><br/>
         Wellsmere Farm: <a href="tel:+18028845431">+1 (802) 884-5431</a>
       
     `,

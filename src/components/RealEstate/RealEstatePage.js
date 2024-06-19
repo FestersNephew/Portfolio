@@ -1,15 +1,34 @@
-// RealEstatePage.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import RealEstateMap from './RealEstateMap';
+import client, { urlFor } from '../../client';  
 import './RealEstatePage.css';
 
-const recentSales = [
-  { id: 1, title: "Charming Farmhouse", description: "A beautiful 3-bedroom farmhouse on 10 acres.", imageUrl: "farmhouse.jpg" },
-  { id: 2, title: "Modern Ski Chalet", description: "A luxurious chalet near the ski slopes.", imageUrl: "chalet.jpg" },
-  // Add more sales as needed
-];
-
 const RealEstatePage = () => {
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    client.fetch(`
+      *[_type == "listing"]{
+        _id,
+        title,
+        description,
+        price,
+        image,
+        bedrooms,
+        bathrooms,
+        sqft,
+        propertyType,
+        "agent": agent->{
+          name,
+          bio,
+          image
+        }
+      }
+    `).then(data => {
+      setListings(data);
+    });
+  }, []);
+
   return (
     <div>
       <section className="section">
@@ -20,11 +39,23 @@ const RealEstatePage = () => {
       <section className="section">
         <h2>Recent Sales</h2>
         <div className="sales-grid">
-          {recentSales.map(sale => (
-            <div key={sale.id} className="sale-item">
-              <img src={sale.imageUrl} alt={sale.title} />
-              <h3>{sale.title}</h3>
-              <p>{sale.description}</p>
+          {listings.map(listing => (
+            <div key={listing._id} className="sale-item">
+              <img src={urlFor(listing.image).url()} alt={listing.title} />
+              <h3>{listing.title}</h3>
+              <p>{listing.description}</p>
+              <p>Price: ${listing.price.toLocaleString()}</p>
+              <p>Bedrooms: {listing.bedrooms}</p>
+              <p>Bathrooms: {listing.bathrooms}</p>
+              <p>Square Feet: {listing.sqft.toLocaleString()}</p>
+              <p>Property Type: {listing.propertyType}</p>
+              {listing.agent && (
+                <div className="agent-info">
+                  <h4>Agent: {listing.agent.name}</h4>
+                  <img src={urlFor(listing.agent.image).url()} alt={listing.agent.name} />
+                  <p>{listing.agent.bio}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>

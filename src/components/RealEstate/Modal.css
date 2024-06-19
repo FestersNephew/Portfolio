@@ -14,8 +14,8 @@
 }
 
 .modal-content {
-  background: #f8f9fa !important;
-  color: #333 !important;
+  background: #62c269 !important;
+  color: #62a8c2 !important;
   padding: 20px !important;
   border-radius: 8px !important;
   position: relative !important;
@@ -40,19 +40,19 @@
 }
 
 .modal-content h2 {
-  color: #2c3e50; 
+  color: #031b36; 
   font-size: 1.8em;
   margin-bottom: 15px;
 }
 
 .modal-content p {
-  color: #34495e; 
+  color: #031b36; 
   line-height: 1.6;
   font-size: 1.1em;
   margin-bottom: 15px;
 }
 .modal-content a {
-  color: #3498db; 
+  color: #2771c5; 
   text-decoration: none;
 }
 
@@ -63,5 +63,5 @@
 .modal-content .local-businesses {
   margin-top: 20px;
   font-weight: bold;
-  color: #2980b9; 
+  color: black; 
 }
