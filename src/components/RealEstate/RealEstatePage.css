@@ -1,55 +1,149 @@
 /* RealEstatePage.css */
 .section {
-    padding: 100px 20px 20px; /* Top padding adjusted for navbar */
-    margin-bottom: 40px;
-    background-color: rgba(0, 0, 0, 0.5); /* Ensure text is readable */
-    border-radius: 8px;
-    color: #83d662; 
-  }
-  
-  .real-estate-header {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #62a8c2; /* Ensure header color contrasts with background */
-  }
-  
-  .sales-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .sale-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .sale-item img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .real-estate-description {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  .real-estate-link {
-    color: #1a73e8;
-    text-decoration: none;
-  }
-  
-  .real-estate-link:hover {
-    text-decoration: underline;
-  }
-  
-  .real-estate-blog {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .real-estate-blog li {
-    margin-bottom: 10px;
-  }
-  
+  padding: 100px 20px 20px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: #83d662;
+}
+
+.real-estate-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #62a8c2;
+}
+
+.sales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.sale-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sale-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.real-estate-description {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.real-estate-link {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.real-estate-link:hover {
+  text-decoration: underline;
+}
+
+.real-estate-blog {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.real-estate-blog li {
+  margin-bottom: 10px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding-top: 60px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #f8f9fa;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 90%;
+  width: auto;
+  max-height: calc(80vh - 60px);
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  font-family: 'Merriweather', serif;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-content h2 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.modal-content a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+.modal-content .local-businesses {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.modal-content img {
+  max-height: 25vh; /* Set the max height of images to 25% of the viewport height */
+  width: auto;
+  max-width: 100%; /* Ensure the image fits within the content width */
+  display: block;
+  margin-bottom: 15px;
+}
+
+.agent-info img {
+  max-height: 25vh; /* Set the max height of agent images to 25% of the viewport height */
+  width: auto;
+  max-width: 100%; /* Ensure the image fits within the content width */
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Additional styles for bio toggle */
+.agent-bio {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 10px;
+}

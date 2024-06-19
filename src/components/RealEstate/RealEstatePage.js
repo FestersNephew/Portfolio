@@ -1,33 +1,33 @@
+// RealEstatePage.js
 import React, { useState, useEffect } from 'react';
 import RealEstateMap from './RealEstateMap';
-import client, { urlFor } from '../../client';  
+import client, { urlFor } from '../../client';
 import './RealEstatePage.css';
 
 const RealEstatePage = () => {
   const [listings, setListings] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [showBio, setShowBio] = useState(false);
 
   useEffect(() => {
-    client.fetch(`
-      *[_type == "listing"]{
-        _id,
-        title,
-        description,
-        price,
-        image,
-        bedrooms,
-        bathrooms,
-        sqft,
-        propertyType,
-        "agent": agent->{
-          name,
-          bio,
-          image
-        }
-      }
-    `).then(data => {
+    client.fetch(`*[_type == "listing"]{
+      ...,
+      agent-> { name, bio, image }
+    }`).then(data => {
       setListings(data);
     });
   }, []);
+
+  const handleListingClick = (listing) => {
+    setModalContent(listing);
+    setShowBio(false);
+    setIsModalOpen(true);
+  };
+
+  const toggleBioVisibility = () => {
+    setShowBio(!showBio);
+  };
 
   return (
     <div>
@@ -40,22 +40,11 @@ const RealEstatePage = () => {
         <h2>Recent Sales</h2>
         <div className="sales-grid">
           {listings.map(listing => (
-            <div key={listing._id} className="sale-item">
+            <div key={listing._id} className="sale-item" onClick={() => handleListingClick(listing)}>
               <img src={urlFor(listing.image).url()} alt={listing.title} />
               <h3>{listing.title}</h3>
-              <p>{listing.description}</p>
               <p>Price: ${listing.price.toLocaleString()}</p>
-              <p>Bedrooms: {listing.bedrooms}</p>
-              <p>Bathrooms: {listing.bathrooms}</p>
-              <p>Square Feet: {listing.sqft.toLocaleString()}</p>
-              <p>Property Type: {listing.propertyType}</p>
-              {listing.agent && (
-                <div className="agent-info">
-                  <h4>Agent: {listing.agent.name}</h4>
-                  <img src={urlFor(listing.agent.image).url()} alt={listing.agent.name} />
-                  <p>{listing.agent.bio}</p>
-                </div>
-              )}
+              {listing.agent && <p>Agent: {listing.agent.name}</p>}
             </div>
           ))}
         </div>
@@ -78,6 +67,37 @@ const RealEstatePage = () => {
         </ul>
         <p className="real-estate-description">Visit our <a href="https://blog.companywebsite.com" target="_blank" rel="noopener noreferrer" className="real-estate-link">Real Estate Blog</a> for more information.</p>
       </section>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setIsModalOpen(false)}>X</button>
+            {modalContent && (
+              <div>
+                <h2>{modalContent.title}</h2>
+                <img src={urlFor(modalContent.image).url()} alt={modalContent.title} />
+                <p>Price: ${modalContent.price.toLocaleString()}</p>
+                {modalContent.agent && (
+                  <>
+                    <h3 onClick={toggleBioVisibility} className="agent-bio">
+                      {modalContent.agent.name}
+                    </h3>
+                    {showBio && (
+                      <div className="agent-info">
+                        {modalContent.agent.image && (
+                          <img src={urlFor(modalContent.agent.image).url()} alt={modalContent.agent.name} />
+                        )}
+                        <p>{modalContent.agent.bio}</p>
+                      </div>
+                    )}
+                  </>
+                )}
+                <p>{modalContent.description}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
