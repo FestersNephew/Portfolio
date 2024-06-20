@@ -1,0 +1,19 @@
+.saleItem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .saleItem img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .listingImage {
+    max-height: 200px; /* Adjust the height as needed */
+    width: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+  

@@ -1,5 +1,4 @@
 /* RealEstatePage.css */
-
 .section {
   padding: 20px 20px; /* Adjusted padding */
   margin-bottom: 20px; /* Reduced margin */
@@ -70,6 +69,12 @@
 .sale-item img {
   max-width: 100%;
   border-radius: 8px;
+}
+
+.agent-bio {
+  cursor: pointer; /* Change the cursor to a pointer */
+  color: #6420a1;
+  margin-top: 10px;
 }
 
 .real-estate-description {
