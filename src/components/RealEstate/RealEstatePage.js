@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import RealEstateMap from './RealEstateMap';
 import client, { urlFor } from '../../client';
-import './RealEstatePage.css';
+import Modal from './Modal';
 import { Link } from 'react-router-dom';
+import './RealEstatePage.css';
 
 const RealEstatePage = () => {
   const [listings, setListings] = useState([]);
@@ -68,38 +69,33 @@ const RealEstatePage = () => {
         <p className="real-estate-description">
           Visit our <Link to="/blog" className="real-estate-link">Real Estate Blog</Link> for more information.
         </p>      
-        </section>
+      </section>
 
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setIsModalOpen(false)}>X</button>
-            {modalContent && (
-              <div>
-                <h2>{modalContent.title}</h2>
-                <img src={urlFor(modalContent.image).url()} alt={modalContent.title} />
-                <p>Price: ${modalContent.price.toLocaleString()}</p>
-                {modalContent.agent && (
-                  <>
-                    <h3 onClick={toggleBioVisibility} className="agent-bio">
-                      {modalContent.agent.name}
-                    </h3>
-                    {showBio && (
-                      <div className="agent-info">
-                        {modalContent.agent.image && (
-                          <img src={urlFor(modalContent.agent.image).url()} alt={modalContent.agent.name} />
-                        )}
-                        <p>{modalContent.agent.bio}</p>
-                      </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {modalContent && (
+          <div>
+            <h2>{modalContent.title}</h2>
+            <img src={urlFor(modalContent.image).url()} alt={modalContent.title} />
+            <p>Price: ${modalContent.price.toLocaleString()}</p>
+            {modalContent.agent && (
+              <>
+                <h3 onClick={toggleBioVisibility} className="agent-bio">
+                  {modalContent.agent.name}
+                </h3>
+                {showBio && (
+                  <div className="agent-info">
+                    {modalContent.agent.image && (
+                      <img src={urlFor(modalContent.agent.image).url()} alt={modalContent.agent.name} />
                     )}
-                  </>
+                    <p>{modalContent.agent.bio}</p>
+                  </div>
                 )}
-                <p>{modalContent.description}</p>
-              </div>
+              </>
             )}
+            <p>{modalContent.description}</p>
           </div>
-        </div>
-      )}
+        )}
+      </Modal>
     </div>
   );
 };

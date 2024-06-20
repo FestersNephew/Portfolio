@@ -1,0 +1,111 @@
+.modalOverlay {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalContent {
+  background: #62c269;
+  color: #031b36;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  max-height: 75vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  font-family: 'Merriweather', serif;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modalContent h2 {
+  color: #031b36;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.modalContent p {
+  color: #031b36;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.modalContent a {
+  color: #2771c5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modalContent a:hover {
+  text-decoration: underline;
+}
+
+.modalContent .localBusinesses {
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.2s ease-in-out;
+}
+
+.modalClose:hover {
+  color: #ff0000;
+}
+
+.modalContent img {
+  max-height: 25vh;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agentInfo img {
+  max-height: 25vh;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agentBio {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.agentBio:hover {
+  color: darkblue;
+}

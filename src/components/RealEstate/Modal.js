@@ -1,14 +1,13 @@
-// Modal.js
 import React from 'react';
-import './Modal.css'; // Reuse the same modal CSS
+import styles from './Modal.module.css'; 
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>X</button>
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.modalClose} onClick={onClose}>X</button>
         {children}
       </div>
     </div>
