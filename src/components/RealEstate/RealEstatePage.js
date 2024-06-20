@@ -1,8 +1,8 @@
-// RealEstatePage.js
 import React, { useState, useEffect } from 'react';
 import RealEstateMap from './RealEstateMap';
 import client, { urlFor } from '../../client';
 import './RealEstatePage.css';
+import { Link } from 'react-router-dom';
 
 const RealEstatePage = () => {
   const [listings, setListings] = useState([]);
@@ -65,8 +65,10 @@ const RealEstatePage = () => {
           <li>Farm and Agricultural Listings</li>
           <li>Charming Town Homes</li>
         </ul>
-        <p className="real-estate-description">Visit our <a href="https://blog.companywebsite.com" target="_blank" rel="noopener noreferrer" className="real-estate-link">Real Estate Blog</a> for more information.</p>
-      </section>
+        <p className="real-estate-description">
+          Visit our <Link to="/blog" className="real-estate-link">Real Estate Blog</Link> for more information.
+        </p>      
+        </section>
 
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>

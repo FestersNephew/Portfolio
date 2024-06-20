@@ -1,7 +1,8 @@
 /* RealEstatePage.css */
+
 .section {
-  padding: 100px 20px 20px;
-  margin-bottom: 40px;
+  padding: 20px 20px; /* Adjusted padding */
+  margin-bottom: 20px; /* Reduced margin */
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   color: #83d662;
@@ -10,7 +11,48 @@
 .real-estate-header {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  margin-top: 60px;
   color: #62a8c2;
+  text-align: center;
+}
+
+.real-estate-map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 1200px) {
+  .real-estate-map-container {
+    height: 200vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .real-estate-map-container {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .real-estate-map-container {
+    height: 100vh;
+  }
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.map-container svg {
+  width: 100%;
+  height: auto;
 }
 
 .sales-grid {
@@ -66,7 +108,7 @@
   align-items: flex-start;
   justify-content: center;
   z-index: 1000;
-  padding-top: 60px;
+  padding-top: 80px;
   overflow-y: auto;
 }
 

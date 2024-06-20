@@ -407,34 +407,33 @@ sandgate: {
 };
 
 const RealEstateMap = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(null);
-
-  const handleClick = (event) => {
-    const townId = event.target.id;
-    console.log('Town clicked:', townId);
-    if (townInfo[townId]) {
-      setModalContent(townInfo[townId]);
-      setIsModalOpen(true);
-    }
-  };
-
-  return (
-    <div>
-      <h1>Real Estate Map</h1>
-      <div onClick={handleClick}>
-        <MapSVG />
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+  
+    const handleClick = (event) => {
+      const townId = event.target.id;
+      console.log('Town clicked:', townId);
+      if (townInfo[townId]) {
+        setModalContent(townInfo[townId]);
+        setIsModalOpen(true);
+      }
+    };
+  
+    return (
+      <div className="real-estate-map-container">
+        <div className="map-container" onClick={handleClick}>
+          <MapSVG />
+        </div>
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          {modalContent && (
+            <div>
+              <h2>{modalContent.name}</h2>
+              <p dangerouslySetInnerHTML={{ __html: modalContent.description }}></p>
+            </div>
+          )}
+        </Modal>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {modalContent && (
-          <div>
-            <h2>{modalContent.name}</h2>
-            <p dangerouslySetInnerHTML={{ __html: modalContent.description }}></p>
-          </div>
-        )}
-      </Modal>
-    </div>
-  );
-};
-
-export default RealEstateMap;
+    );
+  };
+  
+  export default RealEstateMap;
