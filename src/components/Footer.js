@@ -15,7 +15,7 @@ function Footer() {
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>
-            Page built by Trent Stephens;  Template from <a href="https://github.com/soumyajit4419/Portfolio" target="_blank" rel="noopener noreferrer">soumyajit4419</a>
+            Page built by Trent Stephens
           </h3>
         </Col>
         <Col md="4" className="footer-copywright">
