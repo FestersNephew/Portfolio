@@ -57,7 +57,7 @@ const RealEstatePage = () => {
   return (
     <div className={styles.realEstatePage}>
       <section className={styles.section}>
-        <h1 className={styles.realEstateHeader}>Explore Southern Vermont Real Estate</h1>
+      <h1 className={styles.realEstateHeader}>Explore Southern Vermont Real Estate</h1>
         <RealEstateMap onMapClick={handleMapClick} />
       </section>
 

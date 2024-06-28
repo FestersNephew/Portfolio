@@ -1,18 +1,19 @@
-/* RealEstatePage.css */
+/* RealEstatePage.module.css */
 .section {
-  padding: 20px 20px; /* Adjusted padding */
+  padding: 90px 20px; /* Adjusted padding */
   margin-bottom: 20px; /* Reduced margin */
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   color: #83d662;
+  z-index: 1100;
 }
 
-.real-estate-header {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  margin-top: 60px;
+.realEstateHeader {
+  padding: 20px 20px;
+  margin-bottom: 10px;
   color: #62a8c2;
   text-align: center;
+  
 }
 
 .real-estate-map-container {
