@@ -615,6 +615,22 @@ button:focus {
   color: white !important;
 }
 
+/* Add these styles at the end of your CSS file */
+.credit-row {
+  position: relative;
+  z-index: 10; /* Ensure the credit row is above other elements */
+}
+
+.credit-link {
+  color: var(--imp-text-color); /* Optional: Change link color to match your theme */
+  text-decoration: none; /* Optional: Remove underline */
+}
+
+.credit-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;

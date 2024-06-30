@@ -46,6 +46,15 @@ function About() {
         <Toolstack />
 
         <Github />
+
+        {/* Add credit here */}
+        <Row style={{ justifyContent: "center", padding: "10px", marginTop: "50px" }} className="credit-row">
+          <Col style={{ textAlign: "center" }}>
+            <p style={{ fontSize: "1em" }}>
+              Template by <a href="https://github.com/soumyajit4419" target="_blank" rel="noopener noreferrer" className="credit-link">Soumyajit4419</a>
+            </p>
+          </Col>
+        </Row>
       </Container>
     </Container>
   );
