@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://FestersNephew.github.io/Portfolio",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
