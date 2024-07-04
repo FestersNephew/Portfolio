@@ -51,9 +51,9 @@ function App() {
           <Route path="/reiki" element={<Reiki/>} />
           <Route path="/family" element={<Family/>} />
           <Route path="/ecotourism" element={<Ecotourism/>} />
-          <Route path="*" element={<Navigate to="/"/>} />
           <Route path="/blog" element={<Blog/>} />
           <Route path="/post/:slug" element={<BlogPost />} />
+          <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
       </div>
