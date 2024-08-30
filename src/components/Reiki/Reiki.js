@@ -13,7 +13,7 @@ function Reiki() {
   return (
     <div className="reiki-background">
       <Container className="reiki-container">
-      <Particle />
+        <Particle />
         <Row className="justify-content-center">
           <Col md={8} className="text-center">
             <h1 className="reiki-title">My Reiki Practice</h1>
@@ -26,6 +26,25 @@ function Reiki() {
           </Col>
         </Row>
         <ChakraSection />
+
+        <Row className="justify-content-center mt-5">
+          <Col md={10}>
+            <h2 className="reiki-title">Required Disclosures</h2>
+            <p className="reiki-description">
+              Please review the following important disclosures before your first treatment:
+            </p>
+            <ul>
+              <li>Actions that constitute unprofessional conduct. <a href="https://legislature.vermont.gov/statutes/section/26/105/05427" target="_blank" rel="noopener noreferrer">26 V.S.A. Section 5427</a>, <a href="https://legislature.vermont.gov/statutes/section/03/005/00129a" target="_blank" rel="noopener noreferrer">3 V.S.A. Section 129a</a></li>
+              <li>How to file a complaint with OPR. <a href="https://sos.vermont.gov/opr/complaints-conduct-discipline/" target="_blank" rel="noopener noreferrer">File a Complaint</a></li>
+              <li>How to get more information about the profession and registered professionals from OPR. <a href="https://sos.vermont.gov/massage-therapists-bodyworkers-and-touch-professionals/" target="_blank" rel="noopener noreferrer">More Information</a></li>
+            </ul>
+            <p>
+              Please <a className="disclosure-link" href="https://forms.gle/eyzEbzdjrMQBwDK86" target="_blank" rel="noopener noreferrer">click here</a> to acknowledge these disclosures and submit your signature.
+            </p>
+
+          </Col>
+        </Row>
+
         <Row className="justify-content-center">
           <Col md={4} className="reiki-member">
             <div className="reiki-thumbnail-container pulsing">
@@ -40,6 +59,7 @@ function Reiki() {
             <h3 className="reiki-name">Vermont Practice License</h3>
           </Col>
         </Row>
+
         <Row className="justify-content-center">
           <Col md={4} className="reiki-member">
             <div className="reiki-thumbnail-container pulsing">

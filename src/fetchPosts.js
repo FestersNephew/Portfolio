@@ -1,7 +1,7 @@
 import client from './client';
 
 export const fetchPosts = async () => {
-  const query = `*[_type == "post"]{
+  const query = `*[_type == "post"]| order(publishedAt desc){
     title,
     slug,
     mainImage{

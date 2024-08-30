@@ -44,6 +44,24 @@ const RealEstatePage = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://embed.homebotapp.com/lgw/v1/widget.js';
+    script.async = true;
+    script.onload = () => {
+      if (typeof window.Homebot === 'function') {
+        window.Homebot('#homebot_homeowner', '0c98807d5f7d09467f52eab7f86558da8823675d6e543be0', { 'theme': 'dark-mode-theme' });
+      } else {
+        console.error('Homebot is not a function');
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handleListingClick = (listing) => {
     setSelectedListing(listing);
     setIsListingModalOpen(true);
@@ -57,7 +75,7 @@ const RealEstatePage = () => {
   return (
     <div className={styles.realEstatePage}>
       <section className={styles.section}>
-      <h1 className={styles.realEstateHeader}>Explore Southern Vermont Real Estate</h1>
+        <h1 className={styles.realEstateHeader}>Explore Southern Vermont Real Estate</h1>
         <RealEstateMap onMapClick={handleMapClick} />
       </section>
 
@@ -92,6 +110,11 @@ const RealEstatePage = () => {
         <p className={styles.realEstateDescription}>
           Visit our <a href="/blog" className={styles.realEstateLink}>Real Estate Blog</a> for more information.
         </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>How Much is My House Worth?</h2>
+        <div id="homebot_homeowner"></div>
       </section>
 
       {isListingModalOpen && (

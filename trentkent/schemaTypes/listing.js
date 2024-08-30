@@ -1,4 +1,3 @@
-// schemas/listing.js
 export default {
   name: 'listing',
   type: 'document',
@@ -175,7 +174,9 @@ export default {
       title: 'Price per Square Foot',
       readOnly: true,
       description: 'Automatically calculated as Sale Price divided by Finished Square Feet',
-      inputComponent: () => null // Hide the input field in the Studio
+      components: {
+        input: () => null // Hide the input field in the Studio
+      }
     }
   ],
   preview: {

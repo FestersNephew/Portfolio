@@ -1,6 +1,29 @@
-.farm-container {
+.farm-layout {
+  display: flex;
   margin-top: 100px;
   position: relative;
+}
+
+.farm-sidebar {
+  width: 20%; /* Adjust the width as needed */
+  background-color: transparent; /* Set background color if needed */
+  position: fixed;
+  top: 100px; /* Ensure the sidebar is aligned properly */
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farm-content {
+  width: 80%; /* Adjust the width as needed */
+  margin-left: 20%; /* Ensure it aligns with the sidebar */
+}
+
+.farm-container {
+  padding: 0 20px;
 }
 
 .farm-card {
@@ -13,7 +36,6 @@
   border: none; /* Remove any border if present */
   padding: 0; /* Remove any padding if present */
 }
-
 
 .farm-card-title,
 .farm-card-text {

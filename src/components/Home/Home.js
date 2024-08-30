@@ -3,11 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import ProfileTransition from "./ProfileTransition";
+import styles from "./Home.module.css";
 
 function Home() {
   return (
-    <section>
+    <section className={`${styles.homePage}`}>
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
@@ -22,16 +22,12 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> TRENT STEPHENS</strong>
+                <strong className="main-name"> TRENT KENT STEPHENS</strong>
               </h1>
 
               <div style={{ padding: "20px 0", textAlign: "left" }}>
                 <Type />
               </div>
-            </Col>
-
-            <Col md={5} style={{ paddingBottom: 10 }}>
-              <ProfileTransition />
             </Col>
           </Row>
         </Container>
