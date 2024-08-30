@@ -136,7 +136,7 @@ const townInfo = {
           <a href="http://shaftsburycountrystore.com/" target="_blank">Shaftsbury Country Store</a><br/>
           <a href="http://megawattselectric.com/" target="_blank">Megawatt's Electric</a><br/>
           <a href="http://www.bennington.edu/robert-frost-stone-house-museum" target="_blank">Robert Frost Stone House Museum</a><br/>
-          Shaftsbury Auto Repair:<a href="tel:+18024423355"> +1 (802) 442-3355</a>
+          Shaftsbury Auto Repair:<a href="tel:+18024423355"> +1 (802) 442-3355</a><br/>
           Mattisons Christmas Tree Farm:<a href="tel:+18023798158"> +1 (802) 379-8158</a>
       `,
   },
@@ -152,10 +152,19 @@ const townInfo = {
         Arlington's community spirit is evident in its local events and markets, which bring residents and visitors together to celebrate the town's vibrant culture. The town also boasts several historic buildings and sites, offering a glimpse into its rich past.
 
         <br/><br/><span class="local-businesses">Local Businesses:</span><br/>
-        <a href="#" target="_blank">Placeholder Business 1</a><br/>
-        <a href="#" target="_blank">Placeholder Business 2</a><br/>
-        <a href="#" target="_blank">Placeholder Business 3</a><br/>
-        <a href="#" target="_blank">Placeholder Business 4</a><br/>
+        <a href="https://www.bronwynonbattenkill.com/" target="_blank">Bronwyn on Battenkill</a><br/>
+        <a href="http://www.rablogan.com/" target="_blank">Rablogan Castle of Scotland</a><br/>
+        <a href="https://www.mack.com/" target="_blank">Mack Molding</a><br/>
+        <a href="https://quadra-tek.com/" target="_blank">QuadraTek</a><br/>
+        <a href="https://www.sugarshackvt.com/" target="_blank">Sugar Shack and Norman Rockwell Exhibition</a><br/>
+        <a href="https://modernamericacampgrounds.com/vermont/camping-on-the-battenkill" target="_blank">Camping on the Battenkill</a><br/>
+        <a href="https://www.mileslumbercompany.com/" target="_blank">Miles Fuels and Lumber Company</a><br/>
+        <a href="https://burnhamjewelers.com/contact/" target="_blank">Burnham Jewelers</a><br/>
+        <a href="https://thearlingtonvet.com/" target="_blank">Arlington Animal Hospital</a><br/>
+        <a href="https://www.youngsflyfishing.com/contact" target="_blank">Youngs Fly Fishing</a><br/>
+        <a href="https://www.villagepeddlervt.com/" target="_blank">The Village Chocolate Shop</a><br/>
+        <a href="https://www.thelogox.com/" target="_blank">The Log Ox</a><br/>
+        <a href="https://www.howellscampingarea.com/" target="_blank">Howells Camping Area</a><br/>
     `,
 },
 sandgate: {
@@ -170,9 +179,11 @@ sandgate: {
         Despite its small size, Sandgate has a vibrant community spirit, with local events and gatherings bringing residents together. The town's quiet, off-the-beaten-path charm makes it an ideal destination for those seeking a peaceful retreat in the heart of nature.
 
         <br/><br/><span class="local-businesses">Local Businesses:</span><br/>
-        <a href="#" target="_blank">Placeholder Business 1</a><br/>
-        <a href="#" target="_blank">Placeholder Business 2</a><br/>
-        <a href="#" target="_blank">Placeholder Business 3</a><br/>
+        <a href="https://fortunasausage.com/" target="_blank">Fortuna Sausage</a><br/>
+        <a href="https://tristateemulsions.com/" target="_blank">Tristate Emulsions</a><br/>
+        <a href="https://www.sperryunlimited.com/" target="_blank">Sperry Unlimited</a><br/>
+        <a href="https://birdsataloft.com/" target="_blank">Aloft</a><br/>
+        Pleasant Acres Potbellies: <a href="tel:+18026459122">+1 (802) 379-5947</a>
         
     `,
   },
@@ -189,8 +200,16 @@ sandgate: {
 
           <br/><br/><span class="local-businesses">Local Businesses:</span><br/>
           <a href="https://www.merckforest.org/" target="_blank">Merck Forest & Farmland Center</a><br/>
-          <a href="#" target="_blank">Placeholder Business 2</a><br/>
-          <a href="#" target="_blank">Placeholder Business 3</a>
+          <a href="https://www.oronacahfarmequestrian.com/" target="_blank">Oronaca Farm Equestrian</a><br/>
+          <a href="https://authenticdesigns.com/" target="_blank">Authentic Designs</a>
+          <a href="https://theflourgirlbakeshop.com/" target="_blank">The Flour Girl Bake Shop</a>
+          <a href="https://www.rupertkittaylibrary.org/" target="_blank">Rupert Kittay Library</a>
+          <a href="https://jhforge.com/" target="_blank">JH Forge</a>
+          <a href="https://www.oldgraybarn.com/" target="_blank">The Old Gray Barn</a>
+          <a href="https://americancountryrugs.com/" target="_blank">American Country Rugs</a>
+          Rug Crazy: <a href="tel:+18026459122">+1 (802) 394-2300</a>
+          Sherman's Store: <a href="tel:+18026459122">+1 (802) 394-7820</a>
+          Ceglowski & Thrasher: <a href="tel:+18026459122">+1 (802) 394-9944</a>
       `,
   },
   pawlet: {
@@ -206,7 +225,17 @@ sandgate: {
           <a href="https://thebarnrestaurantvt.com/" target="_blank">The Barn Restaurant</a><br/>
           <a href="https://pawletstationrestaurant.com/" target="_blank">Pawlet Station Restaurant</a><br/>
           <a href="https://www.mettaweevalley.com/" target="_blank">Mettawee Valley Farm</a><br/>
-          Thomas Auto Repair: <a href="tel:+18026459122">+1 (802) 645-9122</a>
+          <a href="https://northshirenetworks.com/" target="_blank">Northshire Networks</a><br/>
+          <a href="https://pawletpubliclibrary.com/" target="_blank">Pawlet Public Library</a><br/>
+          <a href="https://machsmarket.com/" target="_blank">Mach's Market</a><br/>
+          <a href="https://www.laughingchildfarm.com/" target="_blank">Laughing Child Farm</a><br/>
+          <a href="https://butternutbendbaking.com/contact-us/" target="_blank">Butternut Bend Baking</a><br/>
+          <a href="https://villagerootsvt.com/" target="_blank">Village Roots Catering</a><br/>
+          <a href="https://www.rhuletttrucking.com/" target="_blank">R. hulett Trucking</a><br/>
+          <a href="https://kinder-way-sanctuary.org/" target="_blank">Kinder Way Sanctuary</a><br/>
+          <a href="https://sgertis.wixsite.com/great-expectations-d" target="_blank">Great Expectations Driving School</a><br/>
+          Sheldons Market: <a href="tel:+18026459122">+1 (802)325-3390</a><br/>
+          Mettowee Valley Family Health: <a href="tel:+18026459122">+1 (802)645-0580</a>
       `,
   },
   windham: {
@@ -219,6 +248,7 @@ sandgate: {
           Windham's community spirit is evident in its local events and gatherings, which bring residents together throughout the year. The town's historical sites and charming architecture reflect its deep-rooted heritage and add to its unique character.
 
           <br/><br/><span class="local-businesses">Local Businesses:</span><br/>
+          <a href="x" target="_blank">e</a><br/>
           <a href="https://www.windhamhillinn.com/" target="_blank">Windham Hill Inn</a><br/>
           <a href="https://www.graftonvillagestore.com/" target="_blank">Grafton Village Store</a><br/>
           Thomas Auto Repair: <a href="tel:+18026459122">+1 (802) 645-9122</a>
