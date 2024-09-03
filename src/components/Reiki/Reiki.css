@@ -4,7 +4,7 @@
   color: #fff;
   padding-bottom: 60px;
   position: relative;
-  z-index: 5; /* Higher z-index to ensure it's above the background effects */
+  z-index: 10; /* Higher z-index to ensure it's above the background effects */
 }
 
 .reiki-title {
@@ -35,6 +35,7 @@
 
 .reiki-thumbnail-image {
   width: 100%;
+  max-width: 500px;
   height: auto;
   transition: transform 0.3s ease;
   border-radius: 15px; 
@@ -147,4 +148,67 @@
   100% {
     background-position: 100% 100%;
   }
+}
+
+.paymentSection {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(17, 16, 16, 0.9);
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+.paymentSection h2 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.paymentSection p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.paymentTags {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.paymentTag {
+  text-align: center;
+}
+
+.paymentImage {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.paymentTag p {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.disclosure-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #623686;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 15; 
+}
+
+.disclosure-button:hover {
+  background-color: #6d20c5d7;
+  color: #fff;
+  text-decoration: none;
 }

@@ -9,7 +9,7 @@ const ProfileTransition = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowReal((prevShowReal) => !prevShowReal);
-    }, 10000); // Adjust the interval as needed (10000 ms = 10 seconds)
+    }, 8000); // Adjust the interval as needed (10000 ms = 10 seconds)
 
     return () => clearInterval(interval);
   }, []);

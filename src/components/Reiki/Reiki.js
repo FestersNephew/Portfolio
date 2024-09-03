@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ChakraSection from "./ChakraSection";
-import "./Reiki.css";
+import "./Reiki.css";  // This imports your standard CSS
 import certificate from "../../Assets/Reiki/reiki_certification.png";
 import license from "../../Assets/Reiki/vermont_license.png";
 import reiki1 from "../../Assets/Reiki/reiki1.JPEG";
 import reiki2 from "../../Assets/Reiki/reiki2.JPEG";
 import reiki3 from "../../Assets/Reiki/reiki3.JPEG";
 import Particle from "../Particle";
+import venmoTag from "../../Assets/Reiki/venmo-tag.png";  
+import cashappTag from "../../Assets/Reiki/cashapp-tag.png";  
+import DisclosureSection from "./DisclosureSection";
 
 function Reiki() {
   return (
@@ -21,30 +24,12 @@ function Reiki() {
               Reiki is an ancient healing art that channels universal life force energy to promote physical, emotional, and spiritual well-being. My journey with Reiki has been deeply personal and transformative. It’s a connection that feels both comforting and familiar, even if not fully understood.
             </p>
             <p className="reiki-description">
-              I offer in-person Reiki sessions, either at your location or in a safe and comfortable space provided by me. I request a minimum donation of $30 for each session, with the hope that you will experience profound healing and comfort through my practice.
+              I offer in-person Reiki sessions, either at your location or in a safe and comfortable space provided by me. I request a donation of $30 for each session, with the hope that you will experience profound healing and comfort through my practice.
             </p>
           </Col>
         </Row>
         <ChakraSection />
-
-        <Row className="justify-content-center mt-5">
-          <Col md={10}>
-            <h2 className="reiki-title">Required Disclosures</h2>
-            <p className="reiki-description">
-              Please review the following important disclosures before your first treatment:
-            </p>
-            <ul>
-              <li>Actions that constitute unprofessional conduct. <a href="https://legislature.vermont.gov/statutes/section/26/105/05427" target="_blank" rel="noopener noreferrer">26 V.S.A. Section 5427</a>, <a href="https://legislature.vermont.gov/statutes/section/03/005/00129a" target="_blank" rel="noopener noreferrer">3 V.S.A. Section 129a</a></li>
-              <li>How to file a complaint with OPR. <a href="https://sos.vermont.gov/opr/complaints-conduct-discipline/" target="_blank" rel="noopener noreferrer">File a Complaint</a></li>
-              <li>How to get more information about the profession and registered professionals from OPR. <a href="https://sos.vermont.gov/massage-therapists-bodyworkers-and-touch-professionals/" target="_blank" rel="noopener noreferrer">More Information</a></li>
-            </ul>
-            <p>
-              Please <a className="disclosure-link" href="https://forms.gle/eyzEbzdjrMQBwDK86" target="_blank" rel="noopener noreferrer">click here</a> to acknowledge these disclosures and submit your signature.
-            </p>
-
-          </Col>
-        </Row>
-
+        <DisclosureSection />
         <Row className="justify-content-center">
           <Col md={4} className="reiki-member">
             <div className="reiki-thumbnail-container pulsing">
@@ -59,6 +44,27 @@ function Reiki() {
             <h3 className="reiki-name">Vermont Practice License</h3>
           </Col>
         </Row>
+        <section className="contactSection">
+          <h2>Schedule a Session</h2>
+          <p>If you're interested in scheduling a Reiki session, please contact me at:</p>
+          <p><strong>Phone:</strong> (802) 345-8869</p>
+          <p><strong>Email:</strong> ecotrent@yahoo.com</p>
+        </section>
+
+        <section className="paymentSection">
+          <h2>Support Me</h2>
+          <p>If you would like to support me, you can send payments via Venmo or CashApp.</p>
+          <div className="paymentTags">
+            <div className="paymentTag">
+              <img src={venmoTag} alt="Venmo Tag" className="paymentImage" />
+              <p>@Trent-Stephens-VT</p>
+            </div>
+            <div className="paymentTag">
+              <img src={cashappTag} alt="CashApp Tag" className="paymentImage" />
+              <p>$TrentStephens</p>
+            </div>
+          </div>
+        </section>
 
         <Row className="justify-content-center">
           <Col md={4} className="reiki-member">

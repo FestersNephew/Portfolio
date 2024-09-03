@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import styles from "./Home.module.css";
+import ProfileTransition from "./ProfileTransition";
 
 function Home() {
   return (
@@ -28,6 +29,9 @@ function Home() {
               <div style={{ padding: "20px 0", textAlign: "left" }}>
                 <Type />
               </div>
+            </Col>
+            <Col md={5} className="profile-transition-col">
+              <ProfileTransition />
             </Col>
           </Row>
         </Container>
