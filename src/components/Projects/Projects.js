@@ -6,6 +6,7 @@ import Particle from "../Particle";
 import ArtSlideshow from "./ArtSlideshow";
 import myconet from "../../Assets/Projects/myconet.png";
 import uniqueFungi from "../../Assets/Projects/uniqueFungi.png";
+import ridgetop from "../../Assets/Projects/ridgetop.png";
 
 
 function Projects() {
@@ -20,6 +21,16 @@ function Projects() {
           Here are a few projects, other than this page, that I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ridgetop}
+              isBlog={false}
+              title="Ridgetop Botanicals"
+              description="Ridgetop Botanicals Website is for a Cannabis Farm in Vermont.  This site is not only a frontend display, but additionally has a full admin backend service with connection to an oracle server for storage and hosting, and making use of a PostgresQL database.  This allows the business owner to update and make changes to the front end display easily and convinently. "
+              ghLink="https://github.com/FestersNephew/ridgetop"
+              demoLink="https://ridgetopBotanicals.com/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={myconet}
